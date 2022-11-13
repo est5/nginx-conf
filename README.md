@@ -1,1 +1,1 @@
-Hello nginx
+- Nginx practice project using vms via vagrant
