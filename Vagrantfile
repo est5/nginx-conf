@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  # Local box
+  # Local box cuz cloud not working from Russia kekw
   config.vm.box = "ubuntu-20.04"
 
   # Site
