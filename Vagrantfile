@@ -5,10 +5,10 @@ Vagrant.configure("2") do |config|
   # Site
   config.vm.provision "file", source: "./demo", destination: "$HOME/sites/demo"
 
-  # Nginx conf
+  # Nginx conf copy to home dir
   config.vm.provision "file", source: "./nginx.conf", destination: "$HOME/nginx.conf"
 
-  # Move nginx conf
+  # Move nginx conf with priveleges
   config.vm.provision "shell",
     inline: "mv /home/vagrant/nginx.conf /etc/nginx/nginx.conf"
 
