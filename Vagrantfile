@@ -12,6 +12,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell",
     inline: "mv /home/vagrant/nginx.conf /etc/nginx/nginx.conf"
 
+  # 'reload' nginx
+  config.vm.provision "shell",
+   inline: "systemctl stop nginx.service "
+  config.vm.provision "shell",
+   inline: "systemctl start nginx.service "
+
   # Networking
   config.vm.network "forwarded_port", guest: 80, host: 8080, id: "nginx"
 end

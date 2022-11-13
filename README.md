@@ -1,1 +1,1 @@
-- Nginx practice project using vms via vagrant
+# Nginx practice project w/ vagrant
